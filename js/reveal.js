@@ -381,6 +381,11 @@
 		// Holds custom key code mappings
 		registeredKeyBindings = {};
 
+	function uninitialize()
+	{
+		initialized = false; // how naughty!
+	}
+
 	/**
 	 * Starts up the presentation if the client is capable.
 	 */
@@ -5805,6 +5810,7 @@
 	Reveal = {
 		VERSION: VERSION,
 
+		uninitialize: uninitialize,
 		initialize: initialize,
 		configure: configure,
 
